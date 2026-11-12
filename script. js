@@ -1,0 +1,22 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const orderForm = document.querySelector("form");
+
+    orderForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const customerName = document.querySelector(
+            'input[type="text"]'
+        ).value;
+
+        const selectedFood = document.querySelector("select");
+
+        alert(
+            "Thank you, " + customerName +
+            "! Your order for " +
+            selectedFood.options[selectedFood.selectedIndex].text +
+            " has been received."
+        );
+
+        orderForm.reset();
+    });
+});
