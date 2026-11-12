@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mama Njeri's Kitchen</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #313338;
+            padding: 30px 15px;
+            color: #333333;
+        }
+
+        header {
+            background-color: #1a110a;
+            padding: 12px 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .brand {
+            color: #e2a829;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        header nav a {
+            color: #e2a829;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #e06d2a, #f39233, #e06d2a);
+            color: #ffffff;
+            text-align: center;
+            padding: 45px 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .main-content {
+            padding: 18px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #d3d3d3;
+            padding: 14px;
+            border-radius: 2px;
+        }
+
+        .card h3 {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #222222;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        th, td {
+            border: 1px solid #cccccc;
+            padding: 7px 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f1b82d;
+            color: #1a110a;
+            font-weight: bold;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 6px 8px;
+            font-size: 13px;
+            border: 1px solid #cccccc;
+            border-radius: 3px;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        button {
+            background-color: #da4f36;
+            color: #ffffff;
+            border: none;
+            padding: 7px 14px;
+            font-size: 13px;
+            font-weight: bold;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .info-box {
+            background-color: #f7f7f5;
+            border: 1px solid #d3d3d3;
+            padding: 18px 12px;
+            font-size: 13px;
+            color: #333333;
+            border-radius: 2px;
+        }
+
+        footer {
+            background-color: #1a110a;
+            color: #cccccc;
+            text-align: center;
+            padding: 10px;
+            font-size: 11px;
+        }
+
+        @media (max-width: 600px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="preview-card">
+        <header>
+            <div class="brand">Mama Njeri's Kitchen</div>
+            <nav>
+                <a href="#menu">Menu</a>
+                <a href="#order">Order</a>
+                <a href="#contact">Visit</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            Fresh Kenyan food, cooked daily
+        </section>
+
+        <div class="main-content">
+
+            <div class="card" id="menu">
+                <h3>Menu (table)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dish</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pilau</td>
+                            <td>KES 350</td>
+                        </tr>
+                        <tr>
+                            <td>Ugali & Sukuma</td>
+                            <td>KES 250</td>
+                        </tr>
+                        <tr>
+                            <td>Chapati (2)</td>
+                            <td>KES 100</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card" id="order">
+                <h3>Place an order (form)</h3>
+                <form action="#">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="pilau">Pilau</option>
+                            <option value="ugali-sukuma">Ugali & Sukuma</option>
+                            <option value="chapati">Chapati (2)</option>
+                        </select>
+                    </div>
+                    <button type="submit">Send order</button>
+                </form>
+            </div>
+
+            <div class="info-box">
+                Gallery: 3 photos in a div grid (images)
+            </div>
+
+            <div class="info-box" id="contact">
+                Opening hours and contact (div)
+            </div>
+
+        </div>
+
+        <footer>
+            &copy; 2026 Mama Njeri's Kitchen
+        </footer>
+    </div>
+
+</body>
+</html>
